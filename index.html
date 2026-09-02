@@ -3,8 +3,9 @@
 <body><div class="head"><h2>BRAND <b>FASHION ZONE</b></h2><small>STYLE YOUR WAY</small></div>
 <div class="hero"><h1>New Fashion. Great Prices.</h1><p>Clothes & Shoes for Everyone</p><a class="btn" href="#products">SHOP NOW</a></div>
 <div class="wrap"><h2>Our Products</h2><div id="products" class="grid"></div></div>
+
 <script>
 const fallback=[["Men Sports Shoes","1499","👟"],["Men Casual Shirt","799","👔"],["Women Kurti","499","👗"],["Men Jeans","999","👖"]];
 let products=JSON.parse(localStorage.getItem("bfz_products")||"null")||fallback;
-document.getElementById("products").innerHTML=products.map(p=>`<div class="card"><div class="pic">${p[2]}</div><h3>${p[0]}</h3><div class="price">₹${p[1]}</div><button class="order" onclick="alert('Order feature: connect your WhatsApp number in the admin setup.')">WhatsApp Order</button></div>`).join("");
-</script></body></html>
+document.getElementById("products").innerHTML=products.map(p=>'<div class="card"><div class="pic">'+p[2]+'</div><h3>'+p[0]+'</h3><div class="price">₹'+p[1]+'</div><button class="order" onclick="alert(\'Order feature: connect your WhatsApp number in the admin setup.\')">WhatsApp Order</button></div>').join("");
+</script>
