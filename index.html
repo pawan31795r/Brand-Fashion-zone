@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brand Fashion Zone</title>
+<style>body{margin:0;font:16px Arial;background:#f7f7f7;color:#111}.head{background:#090909;color:white;padding:20px;text-align:center}.head b{color:#e50914}.hero{padding:50px 8%;background:#222;color:white}.hero h1{font-size:48px}.btn{display:inline-block;background:#e50914;color:white;padding:12px 20px;border-radius:5px;text-decoration:none}.wrap{padding:30px 6%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}.card{background:white;border:1px solid #ddd;border-radius:10px;padding:15px}.pic{height:180px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:60px;border-radius:7px}.price{font-weight:bold;color:#e50914;font-size:20px}.order{background:#111;color:#fff;padding:10px;border:0;border-radius:5px;width:100%}</style></head>
+<body><div class="head"><h2>BRAND <b>FASHION ZONE</b></h2><small>STYLE YOUR WAY</small></div>
+<div class="hero"><h1>New Fashion. Great Prices.</h1><p>Clothes & Shoes for Everyone</p><a class="btn" href="#products">SHOP NOW</a></div>
+<div class="wrap"><h2>Our Products</h2><div id="products" class="grid"></div></div>
+<script>
+const fallback=[["Men Sports Shoes","1499","👟"],["Men Casual Shirt","799","👔"],["Women Kurti","499","👗"],["Men Jeans","999","👖"]];
+let products=JSON.parse(localStorage.getItem("bfz_products")||"null")||fallback;
+document.getElementById("products").innerHTML=products.map(p=>`<div class="card"><div class="pic">${p[2]}</div><h3>${p[0]}</h3><div class="price">₹${p[1]}</div><button class="order" onclick="alert('Order feature: connect your WhatsApp number in the admin setup.')">WhatsApp Order</button></div>`).join("");
+</script></body></html>
