@@ -7,6 +7,6 @@
 <script>
 const fallback=[];
 const   =[];                                       
-let products=JSON.parse(localStorage.getItem("bfz_products")||"null")||fallback;
+const   =[];
 document.getElementById("products").innerHTML=products.map(p=>'<div class="card"><div class="pic">'+p[2]+'</div><h3>'+p[0]+'</h3><div class="price">₹'+p[1]+'</div><button class="order" onclick="alert(\'Order feature: connect your WhatsApp number in the admin setup.\')">WhatsApp Order</button></div>').join("");
 </script>
