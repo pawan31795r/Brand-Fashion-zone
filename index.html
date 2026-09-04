@@ -5,15 +5,19 @@
 <div class="wrap"><h2>Our Products</h2><div id="products" class="grid"></div></div>
 
 <script>
-const products = [
+const products=[
 {name:"Puma T-Shirt",price:999},
 {name:"Puma Shoes",price:1999},
 {name:"Puma Hoodie",price:1499},
-{name:"Puma Track Pant",price:1299},
+{name:"Puma Track Pant",price:1299}
 ];
-const box = document.getElementById("products");
-products.forEach(p => {
-box.innerHTML += `<div><h3>${p.name}</h3><p>₹${p.price}</p></div>`;
+const box=document.querySelector(".wrap");
+products.forEach(p=>{
+box.innerHTML+=`<div><h3>${p.name}</h3><p>₹${p.price}</p></div>`;
 });
+
+
+
+
                                     
 
