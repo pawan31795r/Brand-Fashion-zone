@@ -5,8 +5,15 @@
 <div class="wrap"><h2>Our Products</h2><div id="products" class="grid"></div></div>
 
 <script>
-const fallback=[];
-  const products = [];                                    
-const cart = [];
-document.getElementById("products").innerHTML=products.map(p=>'<div class="card"><div class="pic">'+p[2]+'</div><h3>'+p[0]+'</h3><div class="price">₹'+p[1]+'</div><button class="order" onclick="alert(\'Order feature: connect your WhatsApp number in the admin setup.\')">WhatsApp 8930301717Order</button></div>').join("");
-</script>
+const products = [
+{name:"Puma T-Shirt",price:999},
+{name:"Puma Shoes",price:1999},
+{name:"Puma Hoodie",price:1499},
+{name:"Puma Track Pant",price:1299},
+];
+const box = document.getElementById("products");
+products.forEach(p => {
+box.innerHTML += `<div><h3>${p.name}</h3><p>₹${p.price}</p></div>`;
+});
+                                    
+
